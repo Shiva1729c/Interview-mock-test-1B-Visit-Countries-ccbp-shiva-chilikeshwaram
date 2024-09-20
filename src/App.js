@@ -75,6 +75,6 @@ const initialCountriesList = [
 ]
 
 // Replace your code here
-const App = () => <VisitCountries />
+const App = () => <VisitCountries initialCountriesList={initialCountriesList} />
 
 export default App

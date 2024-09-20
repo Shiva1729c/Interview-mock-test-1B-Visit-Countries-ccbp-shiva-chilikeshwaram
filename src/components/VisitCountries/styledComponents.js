@@ -25,4 +25,13 @@ export const CountryItemContainer = styled.ul`
   list-style-type: none;
   padding-left: 0px;
   border: 1px solid #334155;
+  border-radius: 5px;
+  height: 228px;
+  overflow-y: scroll;
+`
+export const VisitedCountryItemContainer = styled.ul`
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
 `

@@ -1,13 +1,22 @@
-import {CountryListItem, CountryName, VisitButton} from './styledComponents'
+import {
+  CountryListItem,
+  CountryName,
+  VisitButton,
+  VisitedText,
+} from './styledComponents'
 
 const CountryItem = props => {
-  const countryDetails = props
-  const {name} = countryDetails
+  const {countryDetails} = props
+  const {name, isVisited} = countryDetails
 
   return (
     <CountryListItem>
       <CountryName>{name}</CountryName>
-      <VisitButton>Visit</VisitButton>
+      {isVisited ? (
+        <VisitedText>Visited</VisitedText>
+      ) : (
+        <VisitButton type="button">Visit</VisitButton>
+      )}
     </CountryListItem>
   )
 }
