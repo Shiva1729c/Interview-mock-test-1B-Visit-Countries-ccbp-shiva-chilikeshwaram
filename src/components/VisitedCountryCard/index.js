@@ -7,15 +7,21 @@ import {
 } from './styledComponents'
 
 const VisitedCountryCard = props => {
-  const {countryCardDetails} = props
-  const {imageUrl, name, isVisited} = countryCardDetails
+  const {countryCardDetails, unVisitCountry} = props
+  const {imageUrl, name, isVisited, id} = countryCardDetails
+
+  const onClickRemoveButton = () => {
+    unVisitCountry(id)
+  }
 
   const renderCartItem = () => (
     <CardItem>
       <CountryFlagLogo src={imageUrl} alt="thumbnail" />
       <NameAndButtonContainer>
         <CountryName>{name}</CountryName>
-        <RemoveButton type="button">Remove</RemoveButton>
+        <RemoveButton type="button" onClick={onClickRemoveButton}>
+          Remove
+        </RemoveButton>
       </NameAndButtonContainer>
     </CardItem>
   )

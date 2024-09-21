@@ -15,7 +15,7 @@ export const ResponsiveContainer = styled.div`
   padding-top: 20px;
 `
 
-export const MainHeading = styled.div`
+export const MainHeading = styled.h1`
   font-size: 16px;
   font-weight: 400;
   font-family: 'Roboto';
@@ -34,4 +34,12 @@ export const VisitedCountryItemContainer = styled.ul`
   padding-left: 0px;
   display: flex;
   flex-wrap: wrap;
+`
+export const EmptyVisitInstruction = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: #ffffff;
+  text-align: center;
+  margin-top: 100px;
 `

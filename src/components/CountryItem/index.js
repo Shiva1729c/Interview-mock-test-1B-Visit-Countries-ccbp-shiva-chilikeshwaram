@@ -6,8 +6,12 @@ import {
 } from './styledComponents'
 
 const CountryItem = props => {
-  const {countryDetails} = props
-  const {name, isVisited} = countryDetails
+  const {countryDetails, updateToVisited} = props
+  const {name, isVisited, id} = countryDetails
+
+  const onClickVisitButton = () => {
+    updateToVisited(id)
+  }
 
   return (
     <CountryListItem>
@@ -15,7 +19,9 @@ const CountryItem = props => {
       {isVisited ? (
         <VisitedText>Visited</VisitedText>
       ) : (
-        <VisitButton type="button">Visit</VisitButton>
+        <VisitButton type="button" onClick={onClickVisitButton}>
+          Visit
+        </VisitButton>
       )}
     </CountryListItem>
   )
